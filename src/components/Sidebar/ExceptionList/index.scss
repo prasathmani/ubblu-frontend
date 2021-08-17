@@ -1,0 +1,36 @@
+.c-exceptionlist {
+  .accordion {
+    .card {
+      &-header {
+        padding: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+  .mt-3{
+    .accordion{
+      .card{
+        .collapse{
+          .card-body{
+            ul{
+             div{
+               li{
+                 .custom-control{
+                   overflow: hidden;
+                   max-width: 396px;
+                   text-overflow: ellipsis;
+                   white-space: nowrap;
+                 }
+               }
+             }
+            }
+          }
+        }
+      }
+    }
+  }
+}

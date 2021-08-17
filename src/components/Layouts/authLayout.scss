@@ -1,0 +1,78 @@
+@import '../../scss/Partials/variables';
+@import '../../scss/Partials/mixins';
+
+.auth__layout {
+    background-color: #f5f6fa;
+    height: 100%;
+
+    &__wrapper {
+        height: 100%;
+
+        &::after {
+            background-color: #f5f6fa;
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    &__form {
+        background: $white;
+        padding: 25px;
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            border: 0;
+            border-bottom: 1px solid #e6e6e6;
+            border-radius: 0;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        i.far,
+        i.fas {
+            padding-right: 10px;
+            margin-top: 12px;
+            border-bottom: 1px solid #e6e6e6;
+            color: #b9b9b9;
+        }
+
+        &--wrapper {
+            background: #f5f6fa url('/assets/images/login-bg-2.png') no-repeat center center fixed;
+            object-fit: contain;
+            background-size: cover;
+            height: 100%;
+            margin-top: 0;
+
+            @include md {
+                margin-top: -100px;
+            }
+        }
+    }
+
+    &__header {
+        background-color: #f9f9f9;
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    header {
+        padding: 25px 0;
+    }
+
+    button {
+        border-radius: 1px;
+    }
+
+    &__workspace{
+        width: 73%;
+        display: inline-block;
+    }
+
+}

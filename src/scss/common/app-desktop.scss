@@ -1,0 +1,145 @@
+.app-desktop {
+  .app-none {
+    display: none !important;
+  }
+
+  .app-block {
+    display: block !important;
+  }
+
+  /** Remove input placeholder**/
+  input[name='search'] {
+    &::placeholder {
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      opacity: 0;
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      opacity: 0;
+      color: transparent;
+    }
+    ::-webkit-input-placeholder {
+      opacity: 0;
+      color: transparent;
+    }
+  }
+  .c-inbox {
+    &__search--custom-placeholder .placeholder-txt {
+      opacity: 1;
+    }
+  }
+
+  .auth__layout {
+    header {
+      text-align: center;
+    }
+
+    &__form--wrapper {
+      height: auto;
+    }
+  }
+
+  .c-messages {
+    .c-messages-chat {
+      .chat-header__row2 button {
+        display: block;
+        margin-left: 0 !important;
+      }
+
+      .chat-header .media a.c-avatar {
+        @include xs {
+          padding-top: 10px;
+        }
+        @include md {
+          padding-top: unset;
+        }
+      }
+      .chat-header__row > div:first-child {
+        place-self: flex-end;
+      }
+
+      .m-go-back {
+        left: 10px;
+        top: 0;
+      }
+    }
+  }
+
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+  }
+
+  .c-sidebar .sidebar__userheader {
+    &--avatar {
+      @include sm-down {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &--username {
+      @include sm-down {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .sidebar .sidebar__userheader {
+    @include sm-down {
+      display: flex;
+      padding-top: 10px;
+    }
+
+    #js-workspace-actions > button {
+      @include sm-down {
+        display: flex;
+      }
+    }
+
+    &--toggle_status {
+      @include sm-down {
+        margin-left: 3rem;
+        text-align: left;
+      }
+    }
+
+    &--status {
+      @include sm-down {
+        display: flex;
+      }
+    }
+
+    .dropdown-toggle::after {
+      @include sm-down {
+        content: none;
+      }
+    }
+  }
+
+  .c-messages-inbox .message_inbox_tabs {
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+  .dapp-goback {
+    background: #e2e2e2;
+    padding: 1px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

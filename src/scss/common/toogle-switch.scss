@@ -1,0 +1,129 @@
+.toogle-switch input {
+  display: none;
+}
+
+.toogle-switch {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-top: 8px;
+  // transform: translateY(50%);
+  position: relative;
+  background: #fff;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.toogle-switch .toogle-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.toogle-switch .toogle-slider:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #777;
+  border-radius: 30px;
+  transform: translateX(-35px);
+  transition: 0.4s;
+}
+
+.toogle-switch.inactive .toogle-slider:before {
+  background: #fc4c4c;
+}
+
+.toogle-switch input:checked + .toogle-slider:before {
+  transform: translateX(3px);
+  background: #00b94a;
+}
+
+.toogle-switch input:checked + .toogle-slider {
+  box-shadow: 0 0 0 2px #00b94a, 0 0 2px #00b94a;
+}
+
+.toogle-switch.inactive input:checked + .toogle-slider:before {
+  transform: translateX(3px);
+  background: #fc4c4c;
+}
+
+.toogle-switch.inactive input:checked + .toogle-slider {
+  box-shadow: 0 0 0 2px #fc4c4c, 0 0 2px #fc4c4c;
+}
+
+/* The switch - the box around the slider */
+.c-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  input {
+    display: none;
+  }
+
+  input {
+    &.default:checked + .slider {
+      background-color: #444;
+    }
+    &.primary:checked + .slider {
+      background-color: #4d7cfe;
+    }
+    &.success:checked + .slider {
+      background-color: #8bc34a;
+    }
+    &.info:checked + .slider {
+      background-color: #3de0f5;
+    }
+    &.warning:checked + .slider {
+      background-color: #ffc107;
+    }
+    &.danger:checked + .slider {
+      background-color: #f44336;
+    }
+    &:focus + .slider {
+      box-shadow: 0 0 1px #4d7cfe;
+    }
+    &:checked + .slider:before {
+      -webkit-transform: translateX(18px);
+      -ms-transform: translateX(18px);
+      transform: translateX(18px);
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 2px;
+      background-color: white;
+      transition: 0.4s;
+    }
+    &.round {
+      border-radius: 34px;
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.my-workspace {
+  .card {
+    border: 0;
+    .card-title.h5 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__actions {
+    button {
+      min-width: 140px;
+    }
+  }
+}
+
+.signin-workspace {
+  .create__workspace {
+    .workspace__domainname {
+      padding-top: 25px;
+    }
+    input {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

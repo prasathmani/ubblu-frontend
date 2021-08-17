@@ -1,0 +1,174 @@
+@import '../../../scss/Partials/variables';
+@import '../../../scss/Partials/mixins';
+
+.manage-users {
+  .custom-outline-btn {
+    .btn-outline-primary {
+      background-color: $white;
+
+      &:hover {
+        background-color: #007bff;
+      }
+    }
+  }
+
+  .searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color: $white;
+    border-radius: 30px;
+
+    .search_input {
+      border: 0;
+      outline: 0;
+      background: none;
+      caret-color: transparent;
+      padding: 10px;
+      width: 90%;
+    }
+
+    &:hover > .search_input {
+      padding: 10px;
+      caret-color: $btn-primary;
+      transition: width 0.4s linear;
+    }
+
+    &:hover > .search_icon {
+      color: $white;
+      text-decoration: none;
+    }
+
+    .search_icon {
+      height: 36px;
+      width: 38px;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      background-color: $btn-primary;
+      outline: 0;
+      border: 0;
+      margin: 2px;
+    }
+  }
+
+  &__actions {
+    animation: scale-display 0.3s;
+    select {
+      max-width: 25%;
+      display: inline-block;
+      border-color: $white;
+      max-height: 38px;
+    }
+    select.add-dpt {
+      max-width: 33%;
+    }
+  }
+
+  &__table {
+    .table {
+      border-top: 2px solid $btn-primary;
+
+      th {
+        background-color: $white;
+        color: #7c7c7c;
+      }
+
+      td {
+        .action {
+          &--view,
+          &--edit {
+            padding: 5px;
+            background: $btn-primary;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          &--remove,
+          &--suspend {
+            padding: 5px;
+            background: $danger;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__username{
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-word;
+      white-space: nowrap;
+    }
+  }
+
+  &__department {
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #f1e7e7;
+        user-select: none;
+        max-width: 450px;
+        overflow: hidden;
+
+        &:hover {
+          background-color: #f9f9f9;
+        }
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+    &__input{
+      height: 34px !important;
+    }
+    &__btn{
+      max-height: 34px !important;
+      width: 76px;
+      padding: 0px;
+    }
+  }
+
+  .c-input__search {
+    .input-group {
+      input {
+        border-right: 0;
+      }
+
+      .input-group-prepend {
+        .input-group-text {
+          background: transparent;
+          border-left: 0;
+          cursor: pointer;
+
+          i {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    .suggestion-overlay{
+      top: 41px !important;
+      border: solid 1px lightgray !important;
+      width: 463px !important;
+    }
+  }
+}
+
+.user-roles-option {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.default-cursor {
+  cursor: default;
+}

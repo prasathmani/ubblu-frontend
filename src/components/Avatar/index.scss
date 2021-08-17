@@ -1,0 +1,77 @@
+.c-avatar {
+  position: relative;
+  display: inline-block;
+
+  &-presence {
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: inherit;
+    -webkit-transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
+    transition: opacity 0.2s, transform 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #a9a9a9;
+      border-radius: 50%;
+    }
+
+    &--online,
+    &--true {
+      &::after {
+        background-color: #00b94a;
+      }
+    }
+
+    &--away {
+      &::after {
+        background-color: #ff9900;
+      }
+    }
+
+    &--offline {
+      &::after {
+        background-color: #a9a9a9;
+      }
+    }
+
+    &--dnd {
+      &::after {
+        background-color: #c64343;
+      }
+    }
+  }
+
+  &[data-variant='small'] {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .c-avatar-presence {
+      right: -2px;
+    }
+  }
+
+  &[data-variant='medium'] {
+    img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .c-avatar-presence {
+      right: 24px;
+    }
+  }
+}

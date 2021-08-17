@@ -1,0 +1,74 @@
+@import '../../scss/Partials/variables';
+.my-files {
+  &__toolbar {
+    margin-right: -30px;
+    button {
+      background-color: $white;
+      border-color: $border-primary;
+      border-radius: 50% !important;
+      color: $light-dark;
+      margin-right: 15px;
+    }
+    .searchbar {
+      display: inline-block;
+      margin-bottom: auto;
+      margin-top: auto;
+      background-color: $white;
+      border-radius: 30px;
+      min-width: 300px;
+      max-width: 340px;
+
+      .search_input {
+        border: 0;
+        outline: 0;
+        background: none;
+        caret-color: transparent;
+        padding: 10px;
+        width: 80%;
+      }
+
+      &:hover > .search_input {
+        padding: 10px;
+        caret-color: $btn-primary;
+        transition: width 0.4s linear;
+      }
+
+      &:hover > .search_icon {
+        color: $white;
+        text-decoration: none;
+      }
+
+      .search_icon {
+        height: 36px;
+        width: 38px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: $white;
+        background-color: $btn-primary;
+        margin: 2px;
+      }
+    }
+  }
+
+  &__inline--actions {
+    i {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .custom-btn-switch {
+    .btn-group-toggle {
+      label {
+        border: 0;
+        &.btn-light:not(:disabled):not(.disabled).active {
+          background-color: $white;
+          color: $btn-primary;
+        }
+      }
+    }
+  }
+}

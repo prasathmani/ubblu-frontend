@@ -1,0 +1,92 @@
+@import '../../../scss/Partials/variables';
+@import '../../../scss/Partials/mixins';
+
+.sidebar__userheader {
+  text-align: center;
+  background-color: $green;
+  color: $white;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  // transition: left 500ms ease-in-out, background-color 500ms ease-out 500ms;
+
+  &.inactive {
+    background-color: #fc4c4c;
+  }
+
+  &--workspace {
+    padding-bottom: 5px;
+
+    .dropdown-toggle {
+      font-weight: bold;
+      text-transform: capitalize;
+      @include reset-button;
+
+      &:focus,
+      &:hover,
+      &:active {
+        @include reset-button;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    .dropdown-menu {
+      font-size: 14px;
+
+      .dropdown-item {
+        padding: 0.5rem 1.5rem;
+        line-height: 1.5;
+      }
+
+      .c-user {
+        &__avatar {
+          width: 36px;
+          height: 36px;
+          float: left;
+          margin-right: 10px;
+        }
+
+        &__display-name {
+          display: block;
+        }
+
+        &__name {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &--status,
+  &--exception_list {
+    @include sm {
+      display: none;
+    }
+
+    @include md {
+      display: block;
+    }
+  }
+
+  &--exception_list {
+    button {
+      color: $white;
+    }
+  }
+}
+
+.sidebar-collapse {
+  .sidebar__userheader {
+    &--workspace,
+    &--status,
+    &--exception_list {
+      display: none;
+    }
+
+    &--toggle_status {
+      margin-top: 10px;
+    }
+  }
+}

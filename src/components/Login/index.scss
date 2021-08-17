@@ -1,0 +1,23 @@
+.login {
+  background-color: #f5f6fa;
+
+  &__form {
+    .login_forgot {
+      opacity: 0.7;
+      color: #212121;
+      font-size: 12px;
+    }
+  }
+}
+
+.signin__domain {
+  display: block;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.forgot__workspace {
+  width: 100%;
+  text-align: right;
+  margin-right: 10px;
+}

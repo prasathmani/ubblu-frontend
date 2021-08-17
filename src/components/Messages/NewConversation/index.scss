@@ -1,0 +1,122 @@
+@import '../../../scss/Partials/variables';
+@import '../../../scss/Partials/mixins';
+
+span.close {
+  position: absolute;
+  top: 20%;
+  right: 7%;
+  svg {
+    width: 20px;
+  }
+}
+
+input.form-control.form-control-lg {
+  position: relative;
+  padding-right: 35px !important;
+  border: 2px solid #d5d5d5;
+  border-radius: 5px;
+}
+
+.new-conversation {
+  &__channels,
+  &__direct-msg,
+  &__recents {
+    h6 {
+      span {
+        font-size: 0.8rem;
+        color: $btn-primary;
+        margin-left: 10px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 10px 0;
+
+        &:hover {
+          background-color: $bg-light;
+        }
+
+        a {
+          display: flex;
+          flex-flow: row wrap;
+          text-decoration: none;
+
+          > p {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            flex-flow: row;
+            margin: 0 10px;
+            font-size: 20px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            color: black;
+            padding-left: 11px;
+            padding-top: 4px;
+          }
+
+          .c-avatar {
+            margin: 0 10px;
+          }
+
+          div {
+            display: flex;
+            flex: 1 1;
+            flex-direction: column;
+
+            span {
+              display: flex;
+              color: $body-txt;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__input{
+    border-top: 1px solid #d5d5d5 !important;
+    border-bottom: 1px solid #d5d5d5 !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+  &__suggestion-overlay{
+    top: 43px;
+    width: 526px;
+  }
+}
+
+.new-conversation-root {
+  @include lg {
+    .modal-content {
+      right: 118px;
+      width: 700px;
+    }
+  }
+}
+
+.c-input__search {
+  .input-group {
+    input {
+      border-right: 0;
+    }
+
+    .input-group-prepend {
+      .input-group-text {
+        background: transparent;
+        border-left: 0;
+        cursor: pointer;
+
+        i {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}

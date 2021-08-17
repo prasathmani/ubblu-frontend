@@ -1,0 +1,34 @@
+.c-status-icon {
+    margin: 0 5px;
+    color: #616061;
+
+    &:before {
+        display: inline-block;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1;
+        content: "\f111";
+    }
+
+    &--online {
+        color: #00b94a;
+    }
+
+    &--away {
+        color: #ff9900;
+    }
+
+    &--offline {
+        color: #a9a9a9;
+    }
+
+    &--dnd {
+        color: #c64343;
+
+        &:before {
+            content: "\f056";
+        }
+    }
+
+}

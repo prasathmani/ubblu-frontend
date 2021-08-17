@@ -1,0 +1,100 @@
+.manage-profile {
+  .profile-avator {
+    border: solid 0.5px rgba(112, 112, 112, 0.16);
+    max-width: 80px;
+    max-height: 80px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 90%;
+      top: 50%;
+      background: #4d7cfe;
+      font-size: 10px;
+      padding: 3px 5px;
+      cursor: pointer;
+      border-radius: 50%;
+      color: #fff;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  .profile_subscribed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 10px 0;
+
+      span {
+        padding: 0 5px;
+
+        &.custom-icon-check {
+          .far.fa-envelope:before,
+          .fas.fa-ban:before {
+            visibility: visible;
+          }
+
+          .far.fa-envelope:checked:before {
+            content: '\f2b6';
+          }
+
+          input[type='checkbox'].fas,
+          input[type='checkbox'].far {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .cc-selector input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .GOOGLE-DRIVE {
+    background-image: url('/assets/images/icons/icon-google-drive.png');
+  }
+  .DROPBOX {
+    background-image: url('/assets/images/icons/icon-dropbox.png');
+  }
+
+  .cc-selector input:active + .drinkcard-cc {
+    opacity: 0.9;
+  }
+  .cc-selector input:checked + .drinkcard-cc {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+  }
+  .drinkcard-cc {
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(0.7);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(0.7);
+    filter: brightness(1.8) grayscale(1) opacity(0.7);
+  }
+  .drinkcard-cc:hover {
+    -webkit-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+    -moz-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+    filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+  }
+}

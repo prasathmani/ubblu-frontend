@@ -1,0 +1,25 @@
+.c-pin-msg {
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+
+    &--title {
+        font-weight: 500;
+        margin-right: 10px;
+
+        i {
+            transform: rotate(-20deg);
+        }
+    }
+
+    .alert {
+        border-radius: 0;
+        border: 0;
+        margin: 0;
+        padding: 0.5rem 0.8rem;
+
+        button.close {
+            padding: 0.4rem 1rem;
+        }
+    }
+}

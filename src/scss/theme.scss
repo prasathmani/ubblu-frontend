@@ -1,0 +1,121 @@
+/* BS customize */
+@import './Partials/variables';
+@import './Partials/mixins';
+
+.btn {
+  font-size: 0.9rem;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+button.btn-primary {
+  background-color: $btn-primary;
+  border-color: $btn-primary;
+  border-radius: 0;
+}
+
+button.btn-light {
+  background-color: $white;
+  border-color: $white;
+  color: $body-txt;
+}
+
+.form-control {
+  font-size: 14px;
+  height: calc(1.5em + 0.75rem + 10px);
+  border-radius: 0;
+}
+
+.form-control:focus,
+.form-control:active {
+  border-color: #cccccc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus {
+  box-shadow: none;
+}
+
+.invalid-feedback,
+.valid-feedback {
+  font-size: 100%;
+}
+
+.modal-header {
+  background-color: #fcfcfc;
+
+  .modal-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .close {
+    outline: 0;
+  }
+}
+
+.modal-90w {
+  width: 90%;
+  max-width: none !important;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 14px;
+}
+
+.ReactModal__Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-app-region: no-drag;
+  animation-duration: 200ms;
+}
+
+.c-toast-portal {
+  min-width: 222px;
+  position: fixed;
+  bottom: 10px;
+  right: 8px;
+  background-color: $white;
+  z-index: 9999;
+}
+
+.custom-tags-input .react-tagsinput-tag {
+  background-color: #f1f1f1;
+  margin-right: 8px;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.br-top-2 {
+  border-top: 2px solid #4d7cfe;
+}
+
+.icon-mute {
+  .fas.fa-slash {
+    margin-left: -16px;
+  }
+}

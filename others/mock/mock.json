@@ -1,0 +1,230 @@
+{
+  "conversation": [
+    {
+      "id": 24,
+      "success": true,
+      "data": {
+        "status": 1,
+        "message": "Conversation has been fetched successfully",
+        "messages": [
+          {
+            "id": 54587,
+            "message": "How are you?",
+            "messageType": "TEXT",
+            "senderId": 24,
+            "receiver_id": 18,
+            "channel_id": null,
+            "workspace_id": 33,
+            "is_pinned": false,
+            "pinned_by": null,
+            "pinned_at": null,
+            "deleted": null,
+            "created_at": "2019-09-23T12:13:12.821Z",
+            "updated_at": "2019-09-23T12:13:12.821Z"
+          },
+          {
+            "id": 3,
+            "message": "Hii",
+            "messageType": "TEXT",
+            "senderId": 18,
+            "receiver_id": 24,
+            "channel_id": null,
+            "workspace_id": 33,
+            "is_pinned": false,
+            "pinned_by": null,
+            "pinned_at": null,
+            "deleted": null,
+            "created_at": "2019-07-23T12:12:39.831Z",
+            "updated_at": "2019-07-23T12:12:39.831Z"
+          }
+        ],
+        "pinnedMessages": [
+          {
+            "id": 6,
+            "message": "Hey, there?",
+            "messageType": "TEXT",
+            "senderId": 24,
+            "receiver_id": 18,
+            "channel_id": null,
+            "workspace_id": 33,
+            "is_pinned": true,
+            "pinned_by": 1,
+            "pinned_at": "2019-09-23T12:12:39.831Z",
+            "deleted": null,
+            "created_at": "2019-09-23T12:12:39.831Z",
+            "updated_at": "2019-09-23T12:12:39.831Z"
+          }
+        ]
+      }
+    }
+  ],
+  "listing": [
+    {
+      "id": 18,
+      "success": true,
+      "data": {
+        "status": 1,
+        "message": "Conversation found",
+        "conversations": [
+          {
+            "id": 18,
+            "user_id": 24,
+            "workspace_id": 33,
+            "notes": "User is not available",
+            "is_muted": true,
+            "is_tagged": true,
+            "is_starred": true,
+            "lastMessage": {
+              "id": 12504,
+              "message": "How are you?",
+              "messageType": "TEXT",
+              "senderId": 24,
+              "receiver_id": 18,
+              "channel_id": null,
+              "created_at": "2019-10-05T12:13:12.821Z"
+            },
+            "otherUser": {
+              "id": 24,
+              "username": "ryan",
+              "email": "ryan@zetmail.com",
+              "name": "Ryan Reynolds",
+              "profile_image": "https://randomuser.me/api/portraits/men/24.jpg",
+              "timezone": null,
+              "availability": true,
+              "note": null,
+              "created_at": "2019-07-23T11:46:59.145Z"
+            },
+            "Channel": null
+          },
+          {
+            "id": 18,
+            "user_id": 29,
+            "workspace_id": 33,
+            "notes": "User is not available",
+            "is_muted": false,
+            "is_tagged": false,
+            "is_starred": true,
+            "lastMessage": {
+              "id": 12856,
+              "message": "Hey ethan, We're planed for road trip this weekend, do you wanna join?",
+              "messageType": "TEXT",
+              "senderId": 29,
+              "receiver_id": 18,
+              "channel_id": null,
+              "created_at": "2019-10-08T12:13:12.821Z"
+            },
+            "otherUser": {
+              "id": 29,
+              "username": "olivia",
+              "email": "olivia@zetmail.com",
+              "name": "Olivia Jade",
+              "profile_image": "https://randomuser.me/api/portraits/women/29.jpg",
+              "timezone": null,
+              "availability": false,
+              "note": "not ready yet",
+              "created_at": "2019-07-23T11:46:59.145Z"
+            },
+            "Channel": null
+          },
+          {
+            "id": 18,
+            "user_id": 28,
+            "workspace_id": 33,
+            "notes": "Ubblu is a simple AI-powered team chat tool that toots its own horn as a top Slack alternative.",
+            "is_muted": false,
+            "is_tagged": true,
+            "is_starred": false,
+            "lastMessage": {
+              "id": 198754,
+              "message": "Ubblu is a simple AI-powered team chat tool that toots its own horn as a top Slack alternative.",
+              "messageType": "TEXT",
+              "senderId": 28,
+              "receiver_id": 18,
+              "channel_id": null,
+              "created_at": "2019-10-09T12:13:12.821Z"
+            },
+            "otherUser": {
+              "id": 28,
+              "username": "peter",
+              "email": "peter@zetmail.com",
+              "name": "Peter Parker",
+              "profile_image": "https://randomuser.me/api/portraits/men/28.jpg",
+              "timezone": null,
+              "availability": true,
+              "note": null,
+              "created_at": "2019-07-23T11:46:59.145Z"
+            },
+            "Channel": null
+          }
+        ],
+        "taggedConversations": [
+          {
+            "id": 2,
+            "user_id": 1,
+            "workspace_id": 2,
+            "notes": "User is not available",
+            "is_muted": true,
+            "is_tagged": true,
+            "is_starred": true,
+            "lastMessage": {
+              "id": 4,
+              "message": "How are you?",
+              "messageType": "TEXT",
+              "senderId": 1,
+              "receiver_id": 2,
+              "channel_id": null,
+              "created_at": "2019-07-23T12:13:12.821Z"
+            },
+            "otherUser": {
+              "id": 2,
+              "username": "Siddharth",
+              "email": "pudipar@mail-share.net",
+              "name": null,
+              "profile_image": null,
+              "timezone": null,
+              "availability": true,
+              "note": null,
+              "created_at": "2019-07-23T11:46:59.145Z"
+            },
+            "Channel": null
+          }
+        ],
+        "mutedConversations": [
+          {
+            "id": 2,
+            "user_id": 1,
+            "workspace_id": 2,
+            "notes": "User is not available",
+            "is_muted": true,
+            "is_tagged": true,
+            "is_starred": true,
+            "lastMessage": {
+              "id": 4,
+              "message": "How are you?",
+              "messageType": "TEXT",
+              "senderId": 1,
+              "receiver_id": 2,
+              "channel_id": null,
+              "created_at": "2019-07-23T12:13:12.821Z"
+            },
+            "otherUser": {
+              "id": 2,
+              "username": "Siddharth",
+              "email": "pudipar@mail-share.net",
+              "name": null,
+              "profile_image": null,
+              "timezone": null,
+              "availability": true,
+              "note": null,
+              "created_at": "2019-07-23T11:46:59.145Z"
+            },
+            "Channel": null
+          }
+        ]
+      }
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

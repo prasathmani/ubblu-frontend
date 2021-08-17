@@ -1,0 +1,53 @@
+.file-previewer {
+  width: 100%;
+  min-height: 60px;
+
+  li {
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .js-img-preview {
+    padding: 0;
+    li {
+      img {
+        max-height: 50px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .js-file-preview,
+  .js-img-preview {
+    padding: 0;
+    li {
+      padding: 15px;
+      list-style: none;
+      border-bottom: 1px solid #f1efef;
+      width: 98%;
+      opacity: 0.8;
+      i {
+        font-size: 1rem;
+        padding-right: 5px;
+        opacity: 0.7;
+      }
+      button {
+        visibility: hidden;
+        float: right;
+        margin-top: -5px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        button {
+          visibility: visible;
+        }
+      }
+      &:last-child {
+        border-bottom-width: 0;
+      }
+    }
+  }
+}

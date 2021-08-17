@@ -1,0 +1,27 @@
+@import '../../../../scss/common/multi-step.scss';
+
+.channel-add-steps {
+  .channel-step-1__labels {
+    .form-label {
+      vertical-align: top;
+      margin-right: 20px;
+
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .row-user-item {
+    .custom-control.custom-checkbox {
+      display: inline-block;
+    }
+  }
+}
+
+.channel-step2-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}

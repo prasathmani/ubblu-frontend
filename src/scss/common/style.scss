@@ -1,0 +1,39 @@
+/**
+* Common styles
+**/
+
+.label-admin {
+  margin-left: 10px;
+  padding: 2px;
+  font-size: 0.7rem;
+  border: 1px solid #4d7cfe;
+  border-radius: 3px;
+  background-color: rgba(77, 124, 254, 0.10196078431372549);
+  letter-spacing: 0.5px;
+}
+
+.btn-unstyled {
+  background: transparent;
+  border: none;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+/* Override 3rd vendor styles */
+.react-tagsinput--focused {
+  border-color: #ccc !important;
+}
+
+.custom-tags-input .react-tagsinput-tag {
+  background-color: #edf2ff;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(236, 241, 254, 0.7);
+}
+
+.react-tagsinput {
+  min-height: 43px;
+}

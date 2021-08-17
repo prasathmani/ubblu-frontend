@@ -1,0 +1,33 @@
+.dropbox {
+    min-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFAFA;
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 6px #bbbbbb;
+
+    .dropbox--title {
+        svg {
+            width: 1.3rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .dropbox--logo {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-around;
+        img {
+            width: 4.5rem;
+            padding: .4rem;
+            transition: all ease-in .2s;
+            border-radius: .2rem;
+
+            &:hover{
+                box-shadow: 2px 2px 6px #a2a2a2;
+                background-color: #ececec;
+            }
+        }
+    }
+}

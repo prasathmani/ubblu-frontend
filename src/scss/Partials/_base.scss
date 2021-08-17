@@ -1,0 +1,37 @@
+/* -- Base Styles  ---------- */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: $body-txt;
+  text-align: left;
+  font-style: normal;
+  background-color: $body-bg;
+}
+
+a {
+  color: $primary-link;
+}
+
+a.underline {
+  text-decoration: underline !important;
+}
+
+.hide {
+  display: none;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

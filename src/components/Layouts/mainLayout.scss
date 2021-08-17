@@ -1,0 +1,68 @@
+@import '../../scss/Partials/variables';
+@import '../../scss/Partials/mixins';
+
+.main-layout {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+
+  @include md {
+    align-items: stretch;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .sidebar {
+    transition: margin-left 0.4s ease-in-out, left 0.4s ease-in-out;
+    z-index: 11;
+
+    @include md {
+      min-width: 70px;
+      max-width: 70px;
+      position: relative;
+    }
+  }
+
+  .sidebar-submenu {
+    @include md {
+      min-width: 180px;
+      max-width: 180px;
+      position: relative;
+    }
+  }
+
+  .c-vh-100 {
+    @include md {
+      height: 100%;
+    }
+  }
+
+  .c-main-layout {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $bg-light;
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      min-height: 100%;
+    }
+
+    @include xs {
+      min-height: 100%;
+    }
+  }
+}
+
+.sidebar-collapse {
+  .sidebar {
+    @include md {
+      min-width: 60px;
+      max-width: 60px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.c-system-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        position: relative;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0px;
+        padding: 6px 9px 8px 9px;
+        float: left;
+        width: 85%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        user-select: none;
+        width: 100%;
+
+        &:before,
+        &:after {
+            background-color: #e8e6e6;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        &:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        &:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+}

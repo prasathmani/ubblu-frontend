@@ -1,0 +1,274 @@
+@import "../../../../scss/Partials/variables";
+@import "../../../../scss/Partials/mixins";
+
+.c-msg {
+  position: relative;
+  width: 100%;
+  background: $white;
+
+  &-pinned {
+    background: rgba(242, 199, 68, 0.1);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-height: 72px;
+    max-width: 100%;
+    overflow: hidden;
+    min-width: 240px;
+
+    &--avatar {
+      position: relative;
+      margin: 10px;
+      justify-content: center;
+      display: flex;
+      align-items: baseline;
+      min-width: 48px;
+
+      img {
+        width: 38px;
+        height: 38px;
+        border: none !important;
+        border-radius: 100%;
+        overflow: hidden;
+        font-size: 10px;
+        text-align: center;
+        line-height: 50px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    // flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    margin: 3px 0;
+    padding: 10px;
+    background-color: #ecf1fe;
+    border-radius: 3px;
+    margin-right: 70px;
+
+    &--quote {
+      background: #ecf1fe;
+      cursor: pointer;
+      &:hover{
+        opacity: .5;
+      }
+      &--icon {
+        margin-bottom: 0;
+      }
+      &--quoted-message {
+         padding: 5px 0px 0px 24px;
+         font-style: italic; 
+         margin-bottom: 4px; 
+      }
+      &--quoter-message {
+        font-weight: 400; 
+        color: #808080; 
+        padding-top: 4px; 
+        font-style: initial;
+     }
+    }
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+
+      &-username {
+        font-weight: 500;
+        font-size: 13.8px;
+        text-align: left;
+      }
+
+      &-options {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.4);
+
+        .options-edited {
+          margin: 0 5px;
+        }
+
+        .options-pinned {
+          i {
+            color: #e8912d;
+            transform: rotate(20deg);
+            margin: 0 5px;
+          }
+        }
+
+        .options-date {
+          margin: 0 5px;
+        }
+
+        .options-action {
+          margin: 0 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--bottom {
+      margin-top: 4px;
+      display: flex;
+
+      &-msg {
+        color: $light-dark;
+        font-size: 15px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        text-align: left;
+        width: 100%;
+
+        & .tagged_user {
+          font-weight: 500;
+          color: $light-dark;
+        }
+      }
+
+      &-status {
+        margin-left: 3px;
+
+        span {
+          width: 18px;
+          height: 18px;
+          font-size: 12px;
+          color: $white;
+          font-weight: bold;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          border-radius: 100%;
+          background: $danger;
+        }
+      }
+    }
+
+    &--bottom-title,
+    &--top-title {
+      flex: 1;
+    }
+
+    &--images {
+      a {
+        width: calc(40% - 50px);
+        height: 100px;
+        flex: 1.3344;
+        img {
+          width: 100%;
+          height: auto;
+          background-size: cover;
+        }
+      }
+      margin-right: 0px;
+      margin-left: 0px;
+}
+}
+
+  &__delete-alert {
+    position: fixed;
+    max-width: 233px;
+    z-index: 10;
+    top: 50%;
+    left: 60%;
+    opacity: 1;
+  }
+}
+
+.c-msg-right {
+  .c-msg {
+    &__item {
+      text-align: right;
+      justify-content: flex-end;
+
+      &--avatar {
+        order: 2;
+      }
+    }
+
+    &__body {
+      order: 1;
+      background-color: #f5f6fa;
+      margin-right: 0;
+      margin-left: 70px;
+
+      // &--top {
+      //     &-title {
+      //         order: 2;
+      //         text-align: left;
+      //     }
+
+      //     &-options {
+      //         order: 1;
+
+      //         .options-edited {
+      //             order: 4;
+      //         }
+
+      //         .options-pinned {
+      //             order: 3;
+      //         }
+
+      //         .options-date {
+      //             order: 2;
+      //         }
+
+      //         .options-list {
+      //             order: 1;
+      //         }
+      //     }
+      // }
+
+      &--bottom {
+        &-msg {
+          order: 2;
+        }
+
+        &-status {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+.c-msg.color-alt .c-msg__body {
+  background-color: #fafafa;
+}
+
+.c-message-actions {
+  position: absolute;
+  left: 0;
+  top: 0;
+  outline: none;
+  transition-duration: 200ms;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 11;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+  user-select: none;
+  min-width: 140px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+      &:hover {
+        background-color: #ecf1fe;
+      }
+    }
+  }
+}

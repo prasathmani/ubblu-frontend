@@ -1,0 +1,164 @@
+@import '../../../../scss/Partials/variables';
+@import '../../../../scss/Partials/mixins';
+
+.c-input {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  right: 0;
+
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 8px 0px 8px 0px;
+
+  &-container {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $white;
+
+    & .mentions.mentions--multiLine {
+      flex: 1;
+      margin: 0px;
+    }
+    & .mentions__control {
+      @mixin placeholder {
+        ::-webkit-input-placeholder {
+          @content;
+        }
+        ::-moz-placeholder {
+          @content;
+        }
+        :-moz-placeholder {
+          @content;
+        }
+        :-ms-input-placeholder {
+          @content;
+        }
+      }
+      @include placeholder {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.4;
+        color: #a6acaf;
+        text-align: left;
+        font-style: normal;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    button {
+      background: transparent;
+      border: 0;
+      outline: 0;
+      font-size: 20px;
+      color: #afb0b3;
+
+      & i.fa-smile {
+        padding-top: 4px;
+      }
+    }
+
+    & > * {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &:nth-child(even) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-upload i {
+      transform: rotate(140deg);
+      font-size: 14px !important;
+      margin-right: 5px;
+    }
+
+    &-send {
+      background-color: $btn-primary !important;
+      color: $white !important;
+      font-size: 16px !important;
+      padding: 6px 8px;
+      margin-right: 5px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 39px;
+    padding: 10px 5px;
+    border: 1px transparent;
+    resize: none;
+    box-shadow: none;
+    overflow: auto;
+    outline: 0;
+
+    &::placeholder {
+      color: #afb0b3;
+    }
+
+    &:empty:not(:focus)::before {
+      content: attr(placeholder);
+      color: grey;
+    }
+
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__editor {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: left;
+  }
+
+  &__editor--actions {
+    margin: 5px 0;
+    text-align: right;
+    button {
+      padding: 2px 5px;
+      margin-left: 10px;
+    }
+  }
+
+  .emoji-mart {
+    .emoji-mart-category[aria-label='Smileys & People'] {
+      overflow: hidden;
+    }
+  }
+
+  .c-quote {
+    &-icon {
+      vertical-align: super;
+    }
+    &-msg {
+      display: inline-block;
+      text-indent: 5px;
+      word-break: break-word;
+      background-color: #d1dbf5;
+      padding: 4px 5px;
+      border-radius: 3px;
+    }
+  }
+}

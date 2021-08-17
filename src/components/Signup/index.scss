@@ -1,0 +1,87 @@
+@import '../../scss/Partials/variables';
+@import '../../scss/Partials/mixins';
+
+.form-label .far.fa-building,
+button .fas.fa-retweet {
+  border: 0;
+}
+
+.create__workspace {
+  @include md {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .workspace {
+    &__name {
+      font-size: 100%;
+    }
+
+    &__domainname {
+      padding-top: 15px;
+      opacity: 0.7;
+    }
+
+    &__check {
+      button {
+        font-size: 12px;
+        margin-left: 10px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.auth__layout__form .invite {
+  &__add_more {
+    border: 0;
+    background: transparent;
+    outline: 0;
+    color: #212121;
+    padding-top: 15px;
+
+    i {
+      border: 0;
+    }
+  }
+}
+
+.auth__layout__form .tell_us {
+  &__list {
+    select {
+      box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.connect-to-google{
+  position: absolute;
+  text-align: center;
+}
+.connect-to-google ul li {
+  float: left;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  // margin-right: 10px;
+  text-align: center;
+  background-color: #fff;
+  transform: scale(0.75);
+}
+.connect-to-google .auth__layout__form {
+  display: inline-block;
+  position: relative;
+}
+.connect-to-google .auth__layout__form .skip{
+  position: absolute;;
+}
+
+p.auth__signin__text b {
+  font-size: 13px;
+}
+.connect-to-google .auth__layout__form .skip {
+  position: absolute;
+  top: 83%;
+  text-transform: uppercase;
+}
